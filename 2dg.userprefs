@@ -1,0 +1,84 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\doorPuzzle.cs">
+    <Files>
+      <File FileName="Assets\scripts\doorPuzzle.cs" Line="41" Column="4" />
+      <File FileName="Assets\scripts\ChangeColor.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\cameraSmoothFollow.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\camPan.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ActiveStateToggler.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\educationalPopup.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\pushBox.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\moveFire.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\commandMessage.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\mainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\teleportDoor.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\laser.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\typingSound.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\deleteRightArrow.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\removeLeverMessage.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\switch5.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\openingScene.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\enemyBulletMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\enemyDrop.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\elevatorCheckpointScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\gravity.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\artifactPopup.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\veryBeg.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\endGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\removeRedScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\floatingText.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ladderZone.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\hurtOverTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\switchScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\prisonerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\popupAfterPickup.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\pickupObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\pauseEffect.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\enemyPatrol.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\leverScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\mineScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\hurtPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\springScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\healthManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\reverseTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\goTo4th.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\switch2.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\switch3.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\moveplayerOnPlatform.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\levelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\movingPlatform.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\movingPlatfromHori.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\loadFourth.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\prisonerStop.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\bulletMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\hurtPlayer2.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\lvl3Advance.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\gravityChange.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\quit.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\redScreenRemove.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\fade.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\popupMessage.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\OneText.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\repeatedPopups.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\oneText1.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\loading.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\openGate.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\player.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\resize.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\checkpointScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\oneText2.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\oneText3.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\oneText4.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\pushButton.cs" Line="22" Column="2" />
+      <File FileName="Assets\scripts\killPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\elevatorScipt.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\crusher.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\camSiren.cs" Line="37" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

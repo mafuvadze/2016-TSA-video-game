@@ -1,0 +1,56 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\goTo4th.cs">
+    <Files>
+      <File FileName="Assets\scripts\artifactPopup.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\destroyObjectOverTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\collectables.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ApplicationManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\healthRegen.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\binaryPuzzle.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\binaryAnsdetector.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\loading.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\crusher.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ActiveStateToggler.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\pushBox.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\pickupObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\oneText1.cs" Line="1" Column="1" />
+      <File FileName="Assets\binary2.cs" Line="1" Column="1" />
+      <File FileName="Assets\binary3.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\gravityChange.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\player.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\endGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\pauseEffect.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\pushButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\pushButton2.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\teleportDoor.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\switch2.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\switchUniversal.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\cameraTrick.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\prisonerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\hurtOverTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\prisonerStop.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\bulletMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\elevatorScipt.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\elevatorCheckpointScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\lvl3Advance.cs" Line="30" Column="28" />
+      <File FileName="Assets\scripts\loadFourth.cs" Line="30" Column="7" />
+      <File FileName="Assets\scripts\camSiren.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ending.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\levelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\educationalPopup.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\checkpointScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\popupAfterPickup.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\camPan.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\enemyPatrol.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\earthInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\goTo4th.cs" Line="23" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Angellar Manguvo\Documents\2dgNEW\Assets\scripts\artifactPopup.cs" line="57" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

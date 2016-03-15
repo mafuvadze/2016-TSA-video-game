@@ -1,42 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class mainMenu : MonoBehaviour {
 	
-	//public Canvas loadingScreen;
-	public float lifetime;
-	public bool startNextLevel;
-
-	void Start () 
-	{
-		//loadingScreen.enabled = false;
-		startNextLevel = false;
-	}
-	void Update ()
-	{
-		if(lifetime < 0)
-		{
-			Application.LoadLevel ("level01");
-		}
-
-
-	}
-
+	public Image menu;
 	public void playClicked()
 	{
-		Application.LoadLevel ("openingMessage");
-		lifetime = 3;
-		lifetime -= Time.deltaTime;	
-		print("Play Button Clicked");
-		//loadingScreen.enabled = true;
+		menu.CrossFadeAlpha (0f, 4.5f, false);
+		StartCoroutine (switchLevel());
+	}
+
+	IEnumerator switchLevel(){
+		yield return new WaitForSeconds (4.5f);
+		SceneManager.LoadScene ("openingMessage");
 
 	}
+		
 	public void quit()
-{
+	{
 		Application.Quit ();
-}
-public void credits()
-{
+	}
+	public void credits()
+	{
 		print ("Credits Button Clicked");
-}
+	}
 }

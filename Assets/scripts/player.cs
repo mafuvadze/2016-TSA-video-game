@@ -6,12 +6,12 @@ public class player : MonoBehaviour {
 	public float jumpHeight, groundCheckRadius, size, moveVelocity, moveTolerance, maxSpeed, RIGHT, LEFT;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
-	private bool grounded, moving, paused;
+	private bool grounded, moving;
 	public Animator anim;
 	private Rigidbody2D myrigidbody2D;
 	private KeyCode jumpKey = KeyCode.W, pauseKey = KeyCode.P;
 	public Canvas pauseMenu;
-	private static bool movementDisabled;
+	public static bool movementDisabled, paused;
 
 	// Use this for initialization
 	void Start () {

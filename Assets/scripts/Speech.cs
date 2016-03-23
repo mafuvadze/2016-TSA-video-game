@@ -7,11 +7,11 @@ namespace AssemblyCSharp
 		private string message, src;
 		private UnityEngine.Sprite icon;
 
-		public Speech (string message, string src, UnityEngine.Sprite icon)
+		public Speech (string src, string message)
 		{
 			this.src = src;
 			this.message = message;
-			this.icon = icon;
+			icon = Media.getIcon (src);
 		}
 
 		public string getMsg(){

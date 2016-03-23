@@ -6,11 +6,10 @@ public class player : MonoBehaviour {
 	public float jumpHeight, groundCheckRadius, size, moveVelocity, moveTolerance, maxSpeed, RIGHT, LEFT;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
-	private bool grounded, moving;
+	public bool grounded, moving;
 	public Animator anim;
 	private Rigidbody2D myrigidbody2D;
-	private KeyCode jumpKey = KeyCode.W, pauseKey = KeyCode.P;
-	public Canvas pauseMenu;
+	private KeyCode jumpKey = KeyCode.W, jumpKey2 = KeyCode.UpArrow, pauseKey = KeyCode.P;
 	public static bool movementDisabled, paused;
 
 	// Use this for initialization
@@ -20,7 +19,6 @@ public class player : MonoBehaviour {
 		paused = false;
 		myrigidbody2D = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
-		pauseMenu.enabled = false;
 		movementDisabled = false;
 		}
 	
@@ -46,7 +44,7 @@ public class player : MonoBehaviour {
 	}
 
 	void jumpListener(){
-		if (Input.GetKey(jumpKey) && grounded) {
+		if ((Input.GetKey(jumpKey) || Input.GetKey(jumpKey2)) && grounded) {
 			//make player jump to certain height
 			GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight);
 		}
@@ -76,12 +74,11 @@ public class player : MonoBehaviour {
 			moving = false;
 		}
 
-		float movementValue = Input.GetAxisRaw("Horizontal");
-		if (Mathf.Abs (movementValue) > 0.2 && !paused) {
+		if (Mathf.Abs (moveVelocity) > moveTolerance && !paused) {
 			//turn player to face correct direction
-			float direction = movementValue > 0 ? RIGHT : LEFT;
+			float direction = moveVelocity > 0 ? RIGHT : LEFT;
 			direction *= size;
-			transform.localScale = new Vector3 (direction, 1f, 1f);
+			transform.localScale = new Vector3 (direction, size, 1f);
 			moving = true;
 		} else {
 			moving = false;
@@ -92,15 +89,15 @@ public class player : MonoBehaviour {
 
 	//called when pause button (P) is pressed
 	public void pause(){
+		GameManager.pause ();
 		paused = true;
-		pauseMenu.enabled = true;
 		Time.timeScale = 0f;
 	}
 
 	public void resume(){
+		GameManager.resume ();
 		paused = false;
 		Time.timeScale = 1f;
-		pauseMenu.enabled = false;
 	}
 
 	public static void disableMovement(){

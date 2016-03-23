@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class mainMenu : MonoBehaviour {
 	
 	public Image menu;
+	public Text text;
+
+	void Start(){
+		text.CrossFadeAlpha (.25f, 4.5f, false);
+		StartCoroutine (delay(4.5f));
+	}
 	public void playClicked()
 	{
 		menu.CrossFadeAlpha (0f, 4.5f, false);
@@ -14,16 +20,18 @@ public class mainMenu : MonoBehaviour {
 
 	IEnumerator switchLevel(){
 		yield return new WaitForSeconds (4.5f);
-		SceneManager.LoadScene ("openingMessage");
+		text.text = "";
+		SceneManager.LoadScene ("Prologue");
 
+	}
+
+	IEnumerator delay(float time){
+		yield return new WaitForSeconds (time);
+		text.text = "";
 	}
 		
 	public void quit()
 	{
 		Application.Quit ();
-	}
-	public void credits()
-	{
-		print ("Credits Button Clicked");
 	}
 }

@@ -45,21 +45,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ActionButton.cs" />
+     <Compile Include="Assets\Scripts\ActionButton.cs" />
      <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
      <Compile Include="Assets\Scripts\ApplicationManager.cs" />
      <Compile Include="Assets\Scripts\Dialog.cs" />
+     <Compile Include="Assets\Scripts\DialogData.cs" />
+     <Compile Include="Assets\Scripts\DialogPopup.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Hide.cs" />
      <Compile Include="Assets\Scripts\IntroSlideshow.cs" />
      <Compile Include="Assets\Scripts\Media.cs" />
+     <Compile Include="Assets\Scripts\MessageSeq.cs" />
      <Compile Include="Assets\Scripts\MusicOverlap.cs" />
      <Compile Include="Assets\Scripts\PanelManager.cs" />
      <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
+     <Compile Include="Assets\Scripts\SequenceData.cs" />
      <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
      <Compile Include="Assets\Scripts\SlideText.cs" />
      <Compile Include="Assets\Scripts\Speech.cs" />
      <Compile Include="Assets\Scripts\TiltWindow.cs" />
+     <Compile Include="Assets\Scripts\YearInputTrigger.cs" />
      <Compile Include="Assets\Scripts\cameraSmoothFollow.cs" />
      <Compile Include="Assets\Scripts\cameraTrick.cs" />
      <Compile Include="Assets\Scripts\endGame.cs" />

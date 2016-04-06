@@ -50,7 +50,7 @@ public class player : MonoBehaviour {
 		}
 	}
 
-	void pauseListener(){
+	public void pauseListener(){
 		if (Input.GetKeyDown (pauseKey)) {
 			if (paused) {
 				resume ();
@@ -78,13 +78,17 @@ public class player : MonoBehaviour {
 			//turn player to face correct direction
 			float direction = moveVelocity > 0 ? RIGHT : LEFT;
 			direction *= size;
-			transform.localScale = new Vector3 (direction, size, 1f);
+			if (grounded) {
+				transform.localScale = new Vector3 (direction, size, 1f);
+			}
 			moving = true;
 		} else {
 			moving = false;
 		}
 		//move player left or right	
-		GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity,GetComponent<Rigidbody2D>().velocity.y);
+		if (grounded) {
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveVelocity, GetComponent<Rigidbody2D> ().velocity.y);
+		}
 	}
 
 	//called when pause button (P) is pressed

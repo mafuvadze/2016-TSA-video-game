@@ -45,6 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraTarget.cs" />
+     <Compile Include="Assets\Lever.cs" />
+     <Compile Include="Assets\LeverManager.cs" />
      <Compile Include="Assets\Scripts\ActionButton.cs" />
      <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
      <Compile Include="Assets\Scripts\ApplicationManager.cs" />

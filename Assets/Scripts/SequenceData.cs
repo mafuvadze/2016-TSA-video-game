@@ -6,12 +6,15 @@ namespace AssemblyCSharp
 	{
 		
 		public MessageSeq[] control;
+		public MessageSeq[] lever;
 		public SequenceData ()
 		{
 			control = new MessageSeq[]{
 				new MessageSeq("press A and D to move left and right", 5f),
-				new MessageSeq("press W to jump", 3.5f),
-				new MessageSeq("press P to pause", 4f)
+			};
+
+			lever = new MessageSeq[]{
+				new MessageSeq("press X to pull lever", 5f),
 			};
 		}
 	}

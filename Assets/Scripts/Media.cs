@@ -13,7 +13,7 @@ namespace AssemblyCSharp
 			if (icon != null) {
 				return icon;
 			} else {
-				return getDefault ();
+				return Resources.Load<Sprite> ("Images/Characters/unknown");
 			}
 		}
 

@@ -16,8 +16,8 @@ public class cameraSmoothFollow : MonoBehaviour {
 	public float damping = 5.0f;
 	
 	// map maximum X and Y coordinates. (the final boundaries of your map/level)
-	public float mapX = 100.0f;
-	public float mapY = 100.0f;
+	public float mapX = 1000.0f;
+	public float mapY = 1000.0f;
 	
 	// just private var for the map boundaries
 	private float minX = 0f;

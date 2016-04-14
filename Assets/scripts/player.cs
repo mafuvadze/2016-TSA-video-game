@@ -86,9 +86,8 @@ public class player : MonoBehaviour {
 			moving = false;
 		}
 		//move player left or right	
-		if (grounded) {
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveVelocity, GetComponent<Rigidbody2D> ().velocity.y);
-		}
+		GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveVelocity, GetComponent<Rigidbody2D> ().velocity.y);
+
 	}
 
 	//called when pause button (P) is pressed

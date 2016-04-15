@@ -45,7 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Barrier.cs" />
      <Compile Include="Assets\CameraTarget.cs" />
+     <Compile Include="Assets\GameMessagePopup.cs" />
      <Compile Include="Assets\Lever.cs" />
      <Compile Include="Assets\LeverManager.cs" />
      <Compile Include="Assets\Scripts\ActionButton.cs" />

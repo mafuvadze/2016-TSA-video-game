@@ -5,8 +5,7 @@ namespace AssemblyCSharp
 	public class SequenceData
 	{
 		
-		public MessageSeq[] control;
-		public MessageSeq[] lever;
+		public MessageSeq[] lever, control, info, guess;
 		public SequenceData ()
 		{
 			control = new MessageSeq[]{
@@ -14,7 +13,15 @@ namespace AssemblyCSharp
 			};
 
 			lever = new MessageSeq[]{
-				new MessageSeq("press X to pull lever", 5f),
+				new MessageSeq("press X to pull lever", -1f),
+			};
+
+			info = new MessageSeq[]{
+				new MessageSeq("press X to view clue", -1f),
+			};
+
+			guess = new MessageSeq[]{
+				new MessageSeq("what year is it?", -1f),
 			};
 		}
 	}

@@ -9,7 +9,7 @@ public class player : MonoBehaviour {
 	public bool grounded, moving;
 	public Animator anim;
 	private Rigidbody2D myrigidbody2D;
-	private KeyCode jumpKey = KeyCode.W, jumpKey2 = KeyCode.UpArrow, pauseKey = KeyCode.P;
+	private KeyCode jumpKey = KeyCode.W, pauseKey = KeyCode.P;
 	public static bool movementDisabled, paused;
 
 	// Use this for initialization
@@ -44,7 +44,7 @@ public class player : MonoBehaviour {
 	}
 
 	void jumpListener(){
-		if ((Input.GetKey(jumpKey) || Input.GetKey(jumpKey2)) && grounded) {
+		if ((Input.GetKey(jumpKey) && grounded)) {
 			//make player jump to certain height
 			GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight);
 		}
@@ -62,7 +62,13 @@ public class player : MonoBehaviour {
 	}
 
 	void movementListener(){
-		moveVelocity = maxSpeed * Input.GetAxisRaw("Horizontal");
+		if (Input.GetKey (KeyCode.D)) {
+			moveVelocity = maxSpeed;
+		} else if (Input.GetKey (KeyCode.A)) {
+			moveVelocity = maxSpeed * -1;
+		} else {
+			moveVelocity = 0;
+		}
 
 		//makes sure that the player is moving 
 		if(Mathf.Abs(moveVelocity) < moveTolerance)

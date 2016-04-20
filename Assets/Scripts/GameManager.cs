@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 	static Text cluesText, pointsText, yearGuess, text, gameMsgText;
 	private const string pointsData = "POINTS", cluesData = "CLUES";
 	static Image pauseSprite, icon;
-	public static bool disableMovement, gameMsgShown, dialogShown;
+	public static bool disableMovement, gameMsgShown, dialogShown, gameOver;
 	public static Speech[] words;
 	private static int pos;
 
@@ -59,6 +59,9 @@ public class GameManager : MonoBehaviour {
 		hideSelector ();
 		hideGameMsgCanvas ();
 
+		gameOver = false;
+		resetClues ();
+
 		//reset player data on first level
 		if (SceneManager.GetActiveScene ().name == "Level01") {
 			PlayerPrefs.DeleteAll ();
@@ -68,10 +71,7 @@ public class GameManager : MonoBehaviour {
 			updateClues ();
 			updatePoints ();
 		}
-
-		//show message with controlls
-		SequenceData sequenceData = new SequenceData();
-		displayGameMessage(sequenceData.control);
+			
 	}
 
 
@@ -166,14 +166,15 @@ public class GameManager : MonoBehaviour {
 
 	public void onSubmitClicked(){
 		int year = getYearEntered();
-		if(SceneManager.GetActiveScene().name == "Level01"){
-			string msg = "You guessed " + year + ". The correct year was 1775" 
-				+ "\nYou scored " + calculatePoints(year, 1775) + " points";
-			Speech s1 = new Speech ("Game", "Level complete","");
-			Speech s2 = new Speech ("Game", msg,"");
+
+		string msg = "You guessed " + year + ". The correct year was " + getCorrectYear() 
+			+ "\nYou scored " + calculatePoints(year, getCorrectYear()) + " points";
+			Speech s1 = new Speech ("Game", "Level complete","messick");
+			Speech s2 = new Speech ("Game", msg,"messick");
 			Speech[] end = new Speech[]{s1, s2};
+			gameOver = true;
 			displayText (end, true);
-		}
+
 	}
 
 	private static int calculatePoints (int guess, int correct){
@@ -216,10 +217,9 @@ public class GameManager : MonoBehaviour {
 	}
 
 	IEnumerator showTextCoroutine(string msg){
-		text.text = "";
 		foreach (char letter in msg.ToCharArray()) {
 			text.text += letter;
-			yield return new WaitForSeconds (.015f);
+			yield return new WaitForSeconds (.010f);
 		}
 	}
 
@@ -231,6 +231,7 @@ public class GameManager : MonoBehaviour {
 		dialogShown = true;
 		if (disableMovement) {
 			player.disableMovement ();
+			Player2.disableMovement ();
 		}
 		showBlackScreen ();
 		showText ();
@@ -242,10 +243,12 @@ public class GameManager : MonoBehaviour {
 		string message = speech.getMsg ();
 		Sprite pic = speech.getIcon ();
 		GameManager.setDialogIcon (pic);
-		string displayText = "<color=#1e90ff>" + src + "</color>" + "\n" + message;
-		GameManager.setDialogText (displayText);
+		text.text = "";
+		text.text = "<color=#1e90ff>" + src + "</color>\n";
+		GameManager.setDialogText (message);
 		if (disableMovement) {
 			player.disableMovement ();
+			Player2.disableMovement ();
 		}
 		showDialog ();
 	}
@@ -256,6 +259,15 @@ public class GameManager : MonoBehaviour {
 			showText ();
 		} else {
 			finish ();
+			if (gameOver) {
+				if (SceneManager.GetActiveScene ().name == "Level01") {
+					SceneManager.LoadScene ("Level02");
+				}else if (SceneManager.GetActiveScene ().name == "Level02") {
+					SceneManager.LoadScene ("Level03");
+				}else if (SceneManager.GetActiveScene ().name == "Level03") {
+					SceneManager.LoadScene ("Level04");
+				}
+			}
 		}
 	}
 
@@ -266,8 +278,10 @@ public class GameManager : MonoBehaviour {
 		hideBlackScreen ();
 		if (disableMovement) {
 			player.enableMovement ();
+			Player2.enableMovement ();
 		}
 	}
+
 
 	public static void showGameMsgCanvas(){
 		gameMsgCanvas.enabled = true;
@@ -279,6 +293,7 @@ public class GameManager : MonoBehaviour {
 
 	public static void displayGameMessage(MessageSeq[] seq){
 		showGameMsgCanvas ();
+	
 		gameMsgShown = true;
 		if (seq [0].getDuration() != -1f) {
 			instance.continueGameMessage (seq);
@@ -300,6 +315,16 @@ public class GameManager : MonoBehaviour {
 			
 		hideGameMsgCanvas ();
 		gameMsgShown = false;
+	}
+
+	public static int getCorrectYear(){
+		if (SceneManager.GetActiveScene ().name.Equals ("Level01")) {
+			return 1775;
+		} else if (SceneManager.GetActiveScene ().name.Equals ("Level02")) {
+			return 1868;
+		} else {
+			return -1;
+		}
 	}
 		
 	// Update is called once per frame

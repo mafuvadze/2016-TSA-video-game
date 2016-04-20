@@ -38,6 +38,12 @@ public class DialogPopup : MonoBehaviour {
 			convo = dialogData.henry;
 		}else if(name == "hancock"){
 			convo = dialogData.hancock;
+		}else if(name == "impeach"){
+			convo = dialogData.impeach;
+		}else if(name == "grant"){
+			convo = dialogData.grant;
+		}else if(name == "readmit"){
+			convo = dialogData.readmit;
 		}
 
 		GameManager.displayText (convo, true);

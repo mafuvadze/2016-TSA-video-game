@@ -45,25 +45,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Barrier.cs" />
-     <Compile Include="Assets\CameraTarget.cs" />
-     <Compile Include="Assets\GameMessagePopup.cs" />
-     <Compile Include="Assets\Lever.cs" />
-     <Compile Include="Assets\LeverManager.cs" />
-     <Compile Include="Assets\Player2.cs" />
      <Compile Include="Assets\Scripts\ActionButton.cs" />
      <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
      <Compile Include="Assets\Scripts\ApplicationManager.cs" />
+     <Compile Include="Assets\Scripts\Barrier.cs" />
+     <Compile Include="Assets\Scripts\CameraTarget.cs" />
      <Compile Include="Assets\Scripts\Dialog.cs" />
      <Compile Include="Assets\Scripts\DialogData.cs" />
      <Compile Include="Assets\Scripts\DialogPopup.cs" />
+     <Compile Include="Assets\Scripts\DisableGameObj.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\GameMessagePopup.cs" />
      <Compile Include="Assets\Scripts\Hide.cs" />
      <Compile Include="Assets\Scripts\IntroSlideshow.cs" />
+     <Compile Include="Assets\Scripts\Lever.cs" />
+     <Compile Include="Assets\Scripts\LeverManager.cs" />
      <Compile Include="Assets\Scripts\Media.cs" />
      <Compile Include="Assets\Scripts\MessageSeq.cs" />
      <Compile Include="Assets\Scripts\MusicOverlap.cs" />
      <Compile Include="Assets\Scripts\PanelManager.cs" />
+     <Compile Include="Assets\Scripts\Platform.cs" />
+     <Compile Include="Assets\Scripts\Player2.cs" />
+     <Compile Include="Assets\Scripts\Rung.cs" />
      <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
      <Compile Include="Assets\Scripts\SequenceData.cs" />
      <Compile Include="Assets\Scripts\ShowSliderValue.cs" />

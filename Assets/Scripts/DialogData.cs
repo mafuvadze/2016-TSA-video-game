@@ -5,6 +5,7 @@ namespace AssemblyCSharp
 	public class DialogData
 	{
 		public Speech[] test, revere, washington, hancock, mail, henry;
+		public Speech[] impeach, readmit, grant;
 		public DialogData (){
 			Speech test1 = new Speech ("temp1", "Dang Anesu that's so cool", "temp1");
 			Speech test2 = new Speech ("temp2", "Awww thanks guys", "temp2");
@@ -21,6 +22,13 @@ namespace AssemblyCSharp
 			henry = new Speech[]{henry1};
 					Speech mail1 = new Speech("JUNE","The United States Postal Service is created under Benjamin Franklin", "franklin");
 			mail = new Speech[]{mail1};
+
+			Speech impeach1 = new Speech("FEBRUARY","The US House of Representatives votes 126-47 to impeach president Andrew Johnson", "impeach");
+			impeach = new Speech[]{impeach1};
+			Speech readmit1 = new Speech ("JUNE", "Florida, Alabama, Louisiana, Georgia, North Carolina and South Carolina are readmitted into the Union", "readmit"); 
+			readmit = new Speech[]{readmit1};
+			Speech grant1 = new Speech ("NOVEMBER", "Ulysses Grant wins presidency over Horatio Seymour", "grant"); 
+			grant = new Speech[]{grant1};
 
 
 		}

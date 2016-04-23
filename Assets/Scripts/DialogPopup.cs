@@ -44,6 +44,10 @@ public class DialogPopup : MonoBehaviour {
 			convo = dialogData.grant;
 		}else if(name == "readmit"){
 			convo = dialogData.readmit;
+		}else if(name == "lusitania"){
+			convo = dialogData.lusitania;
+		}else if(name == "einstein"){
+			convo = dialogData.einstein;
 		}
 
 		GameManager.displayText (convo, true);

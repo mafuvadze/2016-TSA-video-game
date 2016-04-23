@@ -33,7 +33,7 @@ public class player : MonoBehaviour {
 	void Update () 
 	{
 		//update anim variables
-		anim.SetBool ("moving", moving );
+		anim.SetBool ("moving", moving);
 		anim.SetBool ("grounded", grounded);
 
 		if (!movementDisabled) {

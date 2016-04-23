@@ -13,6 +13,11 @@ public class Lever : MonoBehaviour {
 		data = new SequenceData ();
 		disable = false;
 		renderer = gameObject.GetComponentInChildren<SpriteRenderer> ();
+
+		//workaround to get rung on left to open normally
+		if (opens.Equals ("Rung") || opens.Equals("PlatformR")) {
+			LeverManager.toggleLever (renderer, opens);
+		}
 	}
 	
 	// Update is called once per frame

@@ -14,8 +14,10 @@ public class MusicOverlap : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		/*
 		if (SceneManager.GetActiveScene ().name.Equals (stopLevel)) {
 			audio.Stop ();
 		}
+		*/
 	}
 }

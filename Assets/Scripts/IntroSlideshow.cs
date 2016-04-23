@@ -16,13 +16,7 @@ public class IntroSlideshow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		pos = 0;
-		images = new Sprite[]{Media.getPrologueImage("one"),
-			Media.getPrologueImage("two"), 
-			Media.getPrologueImage("three"),
-			Media.getPrologueImage("four"), 
-			Media.getPrologueImage("five")};
 		messages = new string[]{text1, text2, text3, text4, text5};
-		container.sprite = images [pos];
 		text.text = messages [pos];
 	}
 
@@ -31,16 +25,11 @@ public class IntroSlideshow : MonoBehaviour {
 
 		//change level once end of slide show is reached
 		if (pos == 5) {
-			container.CrossFadeAlpha (0f, 3.5f, false);
-			StartCoroutine (switchLevels());
+			SceneManager.LoadScene ("Level01");
+			return;
 		}
 
-		container.sprite = images [pos];
 		text.text = messages [pos];
 	}
-
-	IEnumerator switchLevels(){
-		yield return new WaitForSeconds (3.5f);
-		SceneManager.LoadScene ("Level01");
-	}
+		
 }

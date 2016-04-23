@@ -24,16 +24,16 @@ public class Barrier : MonoBehaviour {
 
 	IEnumerator startLowering(){
 		do {
-			rb.velocity = new Vector2 (rb.velocity.x, -.8f);
-			yield return new WaitForSeconds (.015f);
+			rb.velocity = new Vector2 (rb.velocity.x, -2f);
+			yield return new WaitForSeconds (.010f);
 		} while(gameObject.transform.position.y >= -8f && !Input.GetKeyDown (KeyCode.X));
 		rb.velocity = new Vector2(rb.velocity.x, -0f);
 	}
 
 	IEnumerator startRaising(){
 		do {
-			rb.velocity = new Vector2 (rb.velocity.x, .8f);
-			yield return new WaitForSeconds (.015f);
+			rb.velocity = new Vector2 (rb.velocity.x, 2f);
+			yield return new WaitForSeconds (.010f);
 		} while(gameObject.transform.position.y <= -3f && !Input.GetKeyDown (KeyCode.X));
 		rb.velocity = new Vector2(rb.velocity.x, -0f);
 	}

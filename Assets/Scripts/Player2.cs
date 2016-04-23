@@ -35,7 +35,7 @@ public class Player2 : MonoBehaviour {
 		anim.SetBool ("moving", moving );
 		anim.SetBool ("grounded", grounded);
 
-		if (!movementDisabled) {
+		if (!movementDisabled && !player.paused) {
 			movementListener ();
 			jumpListener ();
 		}

@@ -6,6 +6,7 @@ namespace AssemblyCSharp
 	{
 		public Speech[] test, revere, washington, hancock, mail, henry;
 		public Speech[] impeach, readmit, grant;
+		public Speech[] einstein, lusitania;
 		public DialogData (){
 			Speech test1 = new Speech ("temp1", "Dang Anesu that's so cool", "temp1");
 			Speech test2 = new Speech ("temp2", "Awww thanks guys", "temp2");
@@ -29,6 +30,11 @@ namespace AssemblyCSharp
 			readmit = new Speech[]{readmit1};
 			Speech grant1 = new Speech ("NOVEMBER", "Ulysses Grant wins presidency over Horatio Seymour", "grant"); 
 			grant = new Speech[]{grant1};
+
+			Speech e1 = new Speech ("NOVEMBER", "Einstein completes his general theory of relativity", "eistein"); 
+			einstein = new Speech[]{e1};
+			Speech l1 = new Speech ("MAY", "A U-Boat sink British liner Lusitania with the loss of American lives, creating a US-German diplomatic crisis", "lusitania"); 
+			lusitania = new Speech[]{l1};
 
 
 		}

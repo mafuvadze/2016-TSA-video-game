@@ -62,6 +62,10 @@ public class GameManager : MonoBehaviour {
 		gameOver = false;
 		resetClues ();
 
+		//display level
+		MessageSeq seq = new MessageSeq(getlevel(), 4.5f);
+		displayGameMessage(new MessageSeq[]{seq});
+
 		//reset player data on first level
 		if (SceneManager.GetActiveScene ().name == "Level01") {
 			PlayerPrefs.DeleteAll ();
@@ -148,7 +152,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public static void updateClues(){
-		cluesText.text = "Clues: " + PlayerPrefs.GetInt (cluesData) + " of 3";
+		cluesText.text = "Clues: " + PlayerPrefs.GetInt (cluesData) + " of " + getCluesNumber();
 	}
 	public static void updatePoints(){
 		pointsText.text = "Score: " + PlayerPrefs.GetInt (pointsData);
@@ -235,6 +239,8 @@ public class GameManager : MonoBehaviour {
 		}
 		showBlackScreen ();
 		showText ();
+
+		displayGameMessage (new SequenceData().dialog);
 	}
 
 	public static void showText(){
@@ -263,7 +269,7 @@ public class GameManager : MonoBehaviour {
 				if (SceneManager.GetActiveScene ().name == "Level01") {
 					SceneManager.LoadScene ("Level02");
 				}else if (SceneManager.GetActiveScene ().name == "Level02") {
-					SceneManager.LoadScene ("Level03");
+					SceneManager.LoadScene ("Main Menu");
 				}else if (SceneManager.GetActiveScene ().name == "Level03") {
 					SceneManager.LoadScene ("Level04");
 				}
@@ -273,6 +279,7 @@ public class GameManager : MonoBehaviour {
 
 	public static void finish(){
 		//end of dialog reached
+		hideGameMsgCanvas ();
 		dialogShown = false;
 		hideDialog ();
 		hideBlackScreen ();
@@ -322,7 +329,26 @@ public class GameManager : MonoBehaviour {
 			return 1775;
 		} else if (SceneManager.GetActiveScene ().name.Equals ("Level02")) {
 			return 1868;
-		} else {
+		}else if (SceneManager.GetActiveScene ().name.Equals ("Level03")) {
+			return 1915;
+		}else {
+			return -1;
+		}
+	}
+
+	public static string getlevel(){
+		string num = SceneManager.GetActiveScene ().name.Substring (6);
+		return "Level " + num;
+	}
+
+	public static int getCluesNumber(){
+		if (SceneManager.GetActiveScene ().name.Equals ("Level01")) {
+			return 3;
+		} else if (SceneManager.GetActiveScene ().name.Equals ("Level02")) {
+			return 3;
+		}else if (SceneManager.GetActiveScene ().name.Equals ("Level03")) {
+			return 2;
+		}  else {
 			return -1;
 		}
 	}

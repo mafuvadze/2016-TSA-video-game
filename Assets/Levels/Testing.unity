@@ -658,6 +658,15 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11440046, guid: a1c76be6d6cd3214b88fab0a2dddcafe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11405848, guid: bfbf359f75323c743834b780c1054a7c,
+        type: 2}
+    - target: {fileID: 11440046, guid: a1c76be6d6cd3214b88fab0a2dddcafe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: pauseListener
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1c76be6d6cd3214b88fab0a2dddcafe, type: 2}
   m_IsPrefabParent: 0

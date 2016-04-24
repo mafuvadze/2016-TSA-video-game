@@ -66,6 +66,11 @@ public class GameManager : MonoBehaviour {
 		MessageSeq seq = new MessageSeq(getlevel(), 4.5f);
 		displayGameMessage(new MessageSeq[]{seq});
 
+		//display instructions
+		if (SceneManager.GetActiveScene ().name.Equals ("Level01")) {
+			displayGameMessage (new SequenceData ().instructions);
+		}
+
 		//reset player data on first level
 		if (SceneManager.GetActiveScene ().name == "Level01") {
 			PlayerPrefs.DeleteAll ();
@@ -124,11 +129,15 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public static void showPauseBtn(){
-		pauseSprite.sprite = blank;
+		if (!player.paused) {
+			pauseSprite.sprite = blank;
+		}
 	}
 
 	public static void hidePauseBtn(){
-		pauseSprite.sprite = pauseImg;
+		if (player.paused) {
+			pauseSprite.sprite = blank;
+		};
 	}
 
 	public static void showClues(){
@@ -204,7 +213,11 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public static void hideDialog(){
-		dialogCanvas.enabled = false;
+		try{
+			dialogCanvas.enabled = false;
+		}catch{
+			Debug.Log("error: dialog null");
+		}
 	}
 
 	public static void setDialogIcon(Sprite img){
@@ -266,14 +279,20 @@ public class GameManager : MonoBehaviour {
 		} else {
 			finish ();
 			if (gameOver) {
-				if (SceneManager.GetActiveScene ().name == "Level01") {
-					SceneManager.LoadScene ("Level02");
-				}else if (SceneManager.GetActiveScene ().name == "Level02") {
-					SceneManager.LoadScene ("Main Menu");
-				}else if (SceneManager.GetActiveScene ().name == "Level03") {
-					SceneManager.LoadScene ("Level04");
-				}
+				startNextlevel ();
 			}
+		}
+	}
+
+	public void startNextlevel(){
+		if (SceneManager.GetActiveScene ().name == "Level01") {
+			SceneManager.LoadScene ("Level02");
+		}else if (SceneManager.GetActiveScene ().name == "Level02") {
+			SceneManager.LoadScene ("Level03");
+		}else if (SceneManager.GetActiveScene ().name == "Level03") {
+			SceneManager.LoadScene ("Level04");
+		}else if (SceneManager.GetActiveScene ().name == "Level04") {
+			SceneManager.LoadScene ("Epilogue");
 		}
 	}
 
@@ -331,6 +350,8 @@ public class GameManager : MonoBehaviour {
 			return 1868;
 		}else if (SceneManager.GetActiveScene ().name.Equals ("Level03")) {
 			return 1915;
+		}else if (SceneManager.GetActiveScene ().name.Equals ("Level04")) {
+			return 1926;
 		}else {
 			return -1;
 		}
@@ -348,9 +369,15 @@ public class GameManager : MonoBehaviour {
 			return 3;
 		}else if (SceneManager.GetActiveScene ().name.Equals ("Level03")) {
 			return 2;
-		}  else {
+		}else if (SceneManager.GetActiveScene ().name.Equals ("Level04")) {
+			return 2;
+		}else {
 			return -1;
 		}
+	}
+
+	public void quitToMenu(){
+		SceneManager.LoadScene ("Main Menu");
 	}
 		
 	// Update is called once per frame

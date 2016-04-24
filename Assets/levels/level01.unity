@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1
 --- !u!114 &128649650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1
 --- !u!114 &128649651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1385,7 +1385,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 406132, guid: 05f32db8d62f342449a348ec8181f3ac, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -56.9
+      value: -43.84
       objectReference: {fileID: 0}
     - target: {fileID: 406132, guid: 05f32db8d62f342449a348ec8181f3ac, type: 2}
       propertyPath: m_LocalPosition.y

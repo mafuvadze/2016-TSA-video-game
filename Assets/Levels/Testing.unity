@@ -412,6 +412,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 22427016, guid: e44227cab0e1aec418f1e79677590ec5, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 69
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e44227cab0e1aec418f1e79677590ec5, type: 2}
   m_IsPrefabParent: 0
@@ -658,15 +662,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11440046, guid: a1c76be6d6cd3214b88fab0a2dddcafe, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 11405848, guid: bfbf359f75323c743834b780c1054a7c,
-        type: 2}
-    - target: {fileID: 11440046, guid: a1c76be6d6cd3214b88fab0a2dddcafe, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: pauseListener
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1c76be6d6cd3214b88fab0a2dddcafe, type: 2}
   m_IsPrefabParent: 0
@@ -704,7 +699,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1
 --- !u!114 &1650818642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -891,15 +886,6 @@ Prefab:
     - target: {fileID: 22425420, guid: 69a0808afe68f9746872e5ea22a85614, type: 2}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11461598, guid: 69a0808afe68f9746872e5ea22a85614, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 11452152, guid: d2d52e81a2afc914f96d46b3424a198e,
-        type: 2}
-    - target: {fileID: 11461598, guid: 69a0808afe68f9746872e5ea22a85614, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: resume
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69a0808afe68f9746872e5ea22a85614, type: 2}

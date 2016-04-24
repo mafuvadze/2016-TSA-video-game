@@ -146,8 +146,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: quit
+      - m_Target: {fileID: 11431744, guid: 2a7acde609ecc2a4f8e3a0875c409a5a, type: 2}
+        m_MethodName: quitToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11452152, guid: d2d52e81a2afc914f96d46b3424a198e, type: 2}
+      - m_Target: {fileID: 11405848, guid: bfbf359f75323c743834b780c1054a7c, type: 2}
         m_MethodName: resume
         m_Mode: 1
         m_Arguments:

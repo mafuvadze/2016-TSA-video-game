@@ -5,7 +5,7 @@ namespace AssemblyCSharp
 	public class SequenceData
 	{
 		
-		public MessageSeq[] lever, control, info, guess, dialog;
+		public MessageSeq[] lever, control, info, guess, dialog, instructions;
 		public SequenceData ()
 		{
 			control = new MessageSeq[]{
@@ -26,6 +26,9 @@ namespace AssemblyCSharp
 
 			dialog = new MessageSeq[]{ 
 				new MessageSeq("click inside dialog box to dismiss", -1f)};
+
+			instructions = new MessageSeq[]{ 
+				new MessageSeq("use arrow keys and WASD to move", 5f)};
 		}
 	}
 }

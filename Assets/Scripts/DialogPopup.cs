@@ -48,8 +48,12 @@ public class DialogPopup : MonoBehaviour {
 			convo = dialogData.lusitania;
 		}else if(name == "einstein"){
 			convo = dialogData.einstein;
+		}else if(name == "sat"){
+			convo = dialogData.sat;
+		}else if(name == "houdini"){
+			convo = dialogData.houdini;
 		}
-
+			
 		GameManager.displayText (convo, true);
 	}
 
